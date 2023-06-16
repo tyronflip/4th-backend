@@ -56,9 +56,10 @@ app.post('/web-data', async (req, res) => {
         await bot.answerWebAppQuery(queryId, {
             type: 'article',
             id: queryId,
-            title: 'Успішна покупка',
+            title: 'Успішне замовлення',
             input_message_content: {
-                message_text: ` Ви придбали товар на суму ${totalPrice}, ${products.map(item => item.title).join(', ')}`
+                message_text: ` Ви придбали товар на суму ${totalPrice}, ${products.map(item => item.title).join(', ')} ,
+                наразі розрахуватися можна лише готівкою`
             }
         })
         return res.status(200).json({});

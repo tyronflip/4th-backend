@@ -1,9 +1,11 @@
+require('dotenv').config()
+
 const TelegramBot = require('node-telegram-bot-api');
 const express = require('express');
 const cors = require('cors');
 
-const token = '6130934084:AAHQplDglgNyt477cydZJG2gFM6o5r6AwUA';
-const webAppUrl = 'localhost:8000';
+const token = '6130934084:AAFOuyQAM_IyWMOT5qImo_6GLh0V8xIA8G0';
+const webAppUrl = 'https://unrivaled-bubblegum-b96f29.netlify.app/';
 
 const bot = new TelegramBot(token, {polling: true});
 const app = express();
